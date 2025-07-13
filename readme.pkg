@@ -1,0 +1,44 @@
+Saya ingin membuat website PHP yang dapat mengakses dan menggunakan API Task yang sudah saya miliki. Berikut adalah spesifikasi yang dibutuhkan:
+
+## Tentang API Task yang Sudah Ada
+API Task saya memiliki fitur-fitur berikut:
+1. Autentikasi menggunakan JWT Token dan API Key
+2. Endpoint untuk manajemen tugas (tasks) dengan operasi CRUD lengkap
+3. Endpoint untuk manajemen kategori (categories)
+4. Endpoint untuk manajemen pengguna (users) termasuk registrasi dan login
+
+Endpoint utama API:
+- Login: POST /api/users/login
+- Register: POST /api/users/register
+- Get Tasks: GET /api/key/tasks (dengan header X-API-Key) atau GET /api/tasks (dengan token JWT)
+- Create Task: POST /api/key/tasks atau POST /api/tasks
+- Update Task: PUT /api/key/tasks/{id} atau PUT /api/tasks/{id}
+- Delete Task: DELETE /api/key/tasks/{id} atau DELETE /api/tasks/{id}
+- Get Categories: GET /api/key/categories atau GET /api/categories
+
+## Kebutuhan Website PHP
+1. Koneksi ke database MySQL untuk menyimpan data sesi dan konfigurasi lokal
+2. Sistem autentikasi yang menyimpan dan menggunakan API Key dan JWT Token
+3. Halaman-halaman berikut:
+   - Login dan registrasi
+   - Dashboard untuk menampilkan daftar tugas
+   - Form untuk menambah, mengedit, dan menghapus tugas
+   - Halaman untuk mengelola kategori
+   - Halaman profil pengguna
+
+4. Fitur-fitur tambahan:
+   - Filter dan pencarian tugas
+   - Pengurutan tugas berdasarkan prioritas, tanggal jatuh tempo, dll.
+   - Perubahan status tugas (pending/completed)
+   - Pengelompokan tugas berdasarkan kategori
+
+5. Desain responsif menggunakan Bootstrap 5
+
+## Struktur Teknis
+- Gunakan pendekatan OOP untuk kode PHP
+- Implementasikan pola MVC (Model-View-Controller)
+- Gunakan PDO untuk koneksi database
+- Implementasikan penanganan error yang baik
+- Gunakan AJAX untuk interaksi yang lebih responsif dengan API
+
+Tolong berikan kode lengkap untuk website ini, termasuk struktur folder, file konfigurasi, dan implementasi semua halaman yang disebutkan di atas. Sertakan juga petunjuk instalasi dan penggunaan.
